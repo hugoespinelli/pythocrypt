@@ -11,8 +11,10 @@ Run into your terminal to install:
     
 ### Documentation
 Latest documentation is at:
+https://hugoespinelli.github.io/pythocrypt/
 
-
+You can also check pypi:
+https://pypi.org/project/pythocrypt/
     
 ### Examples
 
@@ -22,14 +24,14 @@ To encrypt a message using Caesar shift:
 from pythoncrypt import caesar
 
 message = "Hello World"
-message_encripted = caesar.encrypt(message)
+message_encrypted = caesar.encrypt(message)
 ```
 
 For decryption is very similar from example above:
 ```
 from pythoncrypt import caesar
 
-message_encripted = ""
+message_encrypted = ""
 message = caesar.decrypt(message_encripted)
 ```
 
@@ -38,7 +40,7 @@ passing as parameter when calling decrypt method:
 ```
 from pythoncrypt import caesar
 
-message_encripted = ""
+message_encrypted = ""
 message = caesar.decrypt(message_encripted, shift=10)
 ```
     
