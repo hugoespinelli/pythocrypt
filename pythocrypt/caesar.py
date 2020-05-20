@@ -1,6 +1,7 @@
 """
-Caesar cipher for module
+Module for Caesar cipher algorithms
 """
+
 
 def encrypt(message: str, shift: int = 3, key: str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ") -> str:
     """

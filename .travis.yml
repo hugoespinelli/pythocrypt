@@ -1,15 +1,19 @@
+# Disable sudo to speed up the build
+sudo: false
+
+# Set the build language to Python
 language: python
-jobs:
-  include:
-    - name: "Python 3.7.0 on Xenial Linux"
-      python: 3.7
-      before_install:
-        - sudo apt-get install -y python3-dev libasound2-dev
-        - sudo apt install libsdl2-dev libfreetype6-dev libsdl2-mixer-dev libsdl2-image-dev libsdl2-ttf-dev libjpeg-dev libpng-dev libportmidi-dev
-        - pip install codecov
+
+python: 3.7
+
+# Install the codecov pip dependency
 install:
-  - 'pip install pipenv'
-  - 'pipenv sync'
-script: 'python -m pytest'
+  - pip install codecov
+
+# Run the unit test
+script:
+  - coverage run tests.py
+
+# Push the results back to codecov
 after_success:
-  - codecov --file coverage/lcov.info --disable search
+  - codecov

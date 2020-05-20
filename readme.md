@@ -1,4 +1,6 @@
-## PythoCrypt
+## PythoCrypt 
+[![Build Status](https://travis-ci.org/hugoespinelli/pythocrypt.svg?branch=master)](https://travis-ci.org/hugoespinelli/pythocrypt)
+
 
 This package is intended to contain some of the most famous encryption tools, that 
 includes:
