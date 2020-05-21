@@ -45,7 +45,44 @@
 </div>
 <div class="section" id="module-caesar">
 <span id="caesar-cipher"></span><h1>Caesar cipher<a class="headerlink" href="#module-caesar" title="Permalink to this headline">¶</a></h1>
-<p>Caesar cipher for module</p>
+<p>Module for Caesar cipher algorithms</p>
+<dl class="py function">
+<dt id="caesar.brute_force_decryption">
+<code class="sig-prename descclassname">caesar.</code><code class="sig-name descname">brute_force_decryption</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">initial_shift</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">final_shift</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">25</span></em>, <em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'ABCDEFGHIJKLMNOPQRSTUVWXYZ'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#caesar.brute_force_decryption" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns all shifts decryption between 1 and 25.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – message to be decrypted</p></li>
+<li><p><strong>initial_shift</strong> – Initial attempt shift</p></li>
+<li><p><strong>final_shift</strong> – Final attempt shift</p></li>
+<li><p><strong>key</strong> – key used for decryption</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of decrypted messages</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="caesar.decrypt">
+<code class="sig-prename descclassname">caesar.</code><code class="sig-name descname">decrypt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">shift</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">3</span></em>, <em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'ABCDEFGHIJKLMNOPQRSTUVWXYZ'</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#caesar.decrypt" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function decodes encrypted message in caesar’s shift way.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – str. Message to be decrypted</p></li>
+<li><p><strong>shift</strong> – int. Shift to be used</p></li>
+<li><p><strong>key</strong> – str. Key used for decryption</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>message decrypted: str</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py function">
 <dt id="caesar.encrypt">
 <code class="sig-prename descclassname">caesar.</code><code class="sig-name descname">encrypt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">shift</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">3</span></em>, <em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'ABCDEFGHIJKLMNOPQRSTUVWXYZ'</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#caesar.encrypt" title="Permalink to this definition">¶</a></dt>

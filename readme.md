@@ -12,7 +12,7 @@ Run into your terminal to install:
     pip install pythocrypt
     
 ### Documentation
-Latest documentation is at:
+For more information, read the latest documentation is at:
 https://hugoespinelli.github.io/pythocrypt/
 
 You can also check pypi:

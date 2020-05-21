@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(name='pythocrypt',
-      version='0.1',
+      version='0.2',
       description='Several ciphers for python',
       long_description=long_description,
       long_description_content_type="text/markdown",
@@ -18,6 +18,8 @@ setup(name='pythocrypt',
           "Programming Language :: Python :: 3",
           "License :: OSI Approved :: MIT License",
           "Operating System :: OS Independent",
+          "Development Status :: 2 - Pre-Alpha",
+          "Topic :: Security :: Cryptography"
       ],
       python_requires='>=3.6',
       )
