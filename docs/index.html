@@ -102,6 +102,65 @@
 </dd></dl>
 
 </div>
+<div class="section" id="module-rail_fence">
+<span id="rail-fence-cipher"></span><h1>Rail fence cipher<a class="headerlink" href="#module-rail_fence" title="Permalink to this headline">¶</a></h1>
+<p>Module for rail fence cipher.
+In the rail fence cipher, the plain text is written downwards and diagonally on successive
+“rails” of an imaginary fence, then moving up when the bottom rail is reached. When the top rail
+is reached, the message is written downwards again until the whole plaintext is written out.
+The message is then read off in rows.</p>
+<dl class="py function">
+<dt id="rail_fence.brute_force">
+<code class="sig-prename descclassname">rail_fence.</code><code class="sig-name descname">brute_force</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rail_fence.brute_force" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function uses brute force rail fence to break decryption. It starts from 2 rows
+and keep rise until reach the length of the message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> – message to be decrypted</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of possibles messages decrypted</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rail_fence.decrypt">
+<code class="sig-prename descclassname">rail_fence.</code><code class="sig-name descname">decrypt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">rail</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#rail_fence.decrypt" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function decodes encrypted message in rail fence way.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – message to be decoded</p></li>
+<li><p><strong>rail</strong> – number of rails used to encrypt message</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>message decrypted</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rail_fence.encrypt">
+<code class="sig-prename descclassname">rail_fence.</code><code class="sig-name descname">encrypt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">rails</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">2</span></em>, <em class="sig-param"><span class="n">no_spaces</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">uppercase</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#rail_fence.encrypt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to encrypt with rail fence cipher.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – message to be encrypted</p></li>
+<li><p><strong>rails</strong> – number of rails to be used</p></li>
+<li><p><strong>no_spaces</strong> – remove whitespaces to difficult decryption</p></li>
+<li><p><strong>uppercase</strong> – transform to uppercase to difficult decryption</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>encrypted message</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
 
 
           </div>

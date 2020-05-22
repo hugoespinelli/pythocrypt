@@ -1,4 +1,4 @@
-from pythocrypt.rail_fence import encrypt, decrypt
+from pythocrypt.rail_fence import encrypt, decrypt, brute_force
 
 
 def test_rail_fence_encrypt():
@@ -27,3 +27,17 @@ def test_rail_fence_decrypt_with_3_fences():
 
 def test_rail_fence_decrypt_with_4_fences():
     assert (decrypt("WSETAEFRASFLOBKAFRF", 4) == "WAFFLESFORBREAKFAST")
+
+
+def test_rail_fence_decrypt_with_6_fences():
+    assert (decrypt("WBARRFOETFFASLSKAEF", 6) == "WAFFLESFORBREAKFAST")
+
+
+def test_brute_force():
+    words = brute_force("WSETAEFRASFLOBKAFRF")
+    for word in words:
+        if word == "WAFFLESFORBREAKFAST":
+            assert True
+            return
+
+    assert False

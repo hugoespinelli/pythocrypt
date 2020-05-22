@@ -20,7 +20,14 @@ Indices and tables
 * :ref:`search`
 
 
+
 Caesar cipher
 ==================
 .. automodule:: caesar
+   :members:
+
+
+Rail fence cipher
+==================
+.. automodule:: rail_fence
    :members:
