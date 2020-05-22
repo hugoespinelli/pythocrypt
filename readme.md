@@ -4,7 +4,8 @@
 
 This package is intended to contain some of the most famous encryption tools, that 
 includes:
-- Caesar algorithm
+- Caesar shift
+- Rail fence
 
 ### Installation
 Run into your terminal to install:
