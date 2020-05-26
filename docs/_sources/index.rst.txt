@@ -31,3 +31,9 @@ Rail fence cipher
 ==================
 .. automodule:: rail_fence
    :members:
+
+
+Trevanion cipher
+==================
+.. automodule:: trevanion
+   :members:

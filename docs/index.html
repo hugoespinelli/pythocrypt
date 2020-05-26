@@ -161,6 +161,48 @@ and keep rise until reach the length of the message.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="module-trevanion">
+<span id="trevanion-cipher"></span><h1>Trevanion cipher<a class="headerlink" href="#module-trevanion" title="Permalink to this headline">¶</a></h1>
+<p>This null cipher uses every nth letter after a punctuation mark to encode message</p>
+<dl class="py function">
+<dt id="trevanion.decrypt">
+<code class="sig-prename descclassname">trevanion.</code><code class="sig-name descname">decrypt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">shift</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">3</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#trevanion.decrypt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decryption requires to know of the shift N used. To find the plain text it
+is necessary to browse the text in search of the signs of punctuation.
+After each one, count a number of characters (N) to find a new letter of the plaintext.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – message to be decrypted</p></li>
+<li><p><strong>shift</strong> – letter count after punctuation mark</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>message decrypted</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="trevanion.encrypt">
+<code class="sig-prename descclassname">trevanion.</code><code class="sig-name descname">encrypt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">shift</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">3</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#trevanion.encrypt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encryption involves taking a text and be pay attention to position of the
+punctuation so that after each sign, after counting a number of letters
+(eg 3 letters) a letter from the hidden message is found.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – message to be encrypted</p></li>
+<li><p><strong>shift</strong> – letter count after punctuation mark</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>message decrypted</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
 
 
           </div>
