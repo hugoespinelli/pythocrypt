@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(name='pythocrypt',
-      version='0.3',
+      version='0.4',
       description='Several ciphers for python',
       long_description=long_description,
       long_description_content_type="text/markdown",
