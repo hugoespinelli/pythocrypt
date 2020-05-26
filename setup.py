@@ -13,6 +13,7 @@ setup(name='pythocrypt',
       author_email='hugoespinelli@gmail.com',
       license='MIT',
       packages=find_packages(),
+      include_package_data=True,
       zip_safe=False,
       classifiers=[
           "Programming Language :: Python :: 3",
