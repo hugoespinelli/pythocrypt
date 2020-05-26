@@ -14,6 +14,7 @@ setup(name='pythocrypt',
       license='MIT',
       packages=find_packages(),
       include_package_data=True,
+      package_data={'': ['pythocrypt/common/*.txt']},
       zip_safe=False,
       classifiers=[
           "Programming Language :: Python :: 3",

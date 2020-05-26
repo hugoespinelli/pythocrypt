@@ -6,6 +6,8 @@ from string import punctuation
 from pythocrypt.common.utils import load, create_simple_sentence
 from random import choice
 
+import pkg_resources
+
 
 def encrypt(message: str, shift: int = 3) -> str:
     """
@@ -18,7 +20,9 @@ def encrypt(message: str, shift: int = 3) -> str:
     :return: message decrypted
     """
 
-    english_words = load("pythocrypt/common/english_words.txt")
+    path = './common/english_words.txt'  # always use slash
+    filepath = pkg_resources.resource_filename(__name__, path)
+    english_words = load(filepath)
 
     message = message.replace(" ", "")
 

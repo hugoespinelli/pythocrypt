@@ -45,7 +45,7 @@ def create_simple_sentence(should_include_first_noun: bool = False) -> str:
     possibles = [True, False]
     should_be_singular = choice(possibles)
 
-    sentence = choice(s_nouns).capitalize() if should_include_first_noun else ""
+    sentence = f"{choice(s_nouns).capitalize()} " if should_include_first_noun else ""
 
     if should_be_singular:
         sentence += f"{choice(s_verbs)} {choice(s_nouns)}"
