@@ -17,7 +17,8 @@ def encrypt(message: str, rails: int = 2, no_spaces: bool = True, uppercase: boo
     :param uppercase: transform to uppercase to difficult decryption
     :return: encrypted message
     """
-
+    
+    message_encrypted = message
     if no_spaces:
         message_encrypted = message.replace(" ", "")
     if uppercase:
